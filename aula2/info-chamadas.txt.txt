@@ -1,0 +1,24 @@
+execve: executa um programa (“aula2”)
+
+access: verifica se o processo sendo chamado consegue acessar o arquivo passado como argumento em um modo (no caso R_OK)
+
+openat: abre um arquivo especificado, se ele não existir pode criá-lo.
+
+fstat: retorna detalhes sobre o arquivo (não precisa de permissões)
+
+mmap: cria um novo mapeamento no espaço de memória virtual do processo.
+
+close: fecha a referência de um arquivo.
+
+read: lê do método de entrada padrão e envia para o método de saída padrão ou armazena em uma ou mais variáveis shell.
+
+pread64: lê uma quantidade especificada de bytes do arquivo referenciado por fd num offset predefinido para o buffer passado.
+
+mprotect: muda as permissões de acesso para uma determinada região da memória do processo.
+
+munmap: cria um novo mapeamento no espaço de memória virtual do processo.
+
+write: copia as linhas de um terminal para outro.
+
+brk: muda o local de break de um processo, que tem efeito de aumentar ou diminuir a quantidade de memória desse processo.
+
