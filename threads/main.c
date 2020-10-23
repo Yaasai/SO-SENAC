@@ -11,7 +11,7 @@ int contar_palavras(FILE *f) {
     return palavras;
 }
 
-void *parse_file(char *filename) {
+void *ler_arquivo(char *filename) {
   FILE *fp;
   if((fp = fopen(filename, "r")) != NULL) {
     int numeroPalavras = contar_palavras(fp);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     pthread_t t[argc-1];
 
     for (int i=1; i < argc; i++) { 
-        pthread_create(&t[i-1], NULL, (void *)parse_file, argv[i]); 
+        pthread_create(&t[i-1], NULL, (void *)ler_arquivo, argv[i]); 
     }
     for (int i=1; i < argc; i++) { 
         pthread_join(t[i-1], NULL); 
