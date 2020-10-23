@@ -15,7 +15,7 @@ void *ler_arquivo(char *filename) {
   FILE *fp;
   if((fp = fopen(filename, "r")) != NULL) {
     int numeroPalavras = contar_palavras(fp);
-    printf("%d\n", numeroPalavras);
+    printf("%s - %d\n", filename, numeroPalavras);
   }
   fclose(fp);
 
